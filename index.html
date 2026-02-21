@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduStream — University LMS</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <i data-lucide="graduation-cap" class="logo-icon"></i>
+        <span class="logo-text">EduStream</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#dashboard" class="nav-item active">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#courses" class="nav-item">
+          <i data-lucide="book-open"></i>
+          <span>My Courses</span>
+        </a>
+        <a href="#resources" class="nav-item">
+          <i data-lucide="folder-open"></i>
+          <span>Resources</span>
+        </a>
+        <a href="#quizzes" class="nav-item">
+          <i data-lucide="clipboard-list"></i>
+          <span>Quizzes</span>
+        </a>
+        <a href="#materials" class="nav-item">
+          <i data-lucide="library"></i>
+          <span>Other Resources</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#settings" class="nav-item">
+          <i data-lucide="settings"></i>
+          <span>Settings</span>
+        </a>
+        <div class="user-card">
+          <div class="user-avatar">RET</div>
+          <div class="user-info">
+            <span class="user-name">Rhoda Elolo Tengeh</span>
+            <span class="user-role">Year 1 · BSc CS</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1 class="page-title">Welcome back, Rhoda</h1>
+        <div class="header-actions">
+          <div class="search-box">
+            <i data-lucide="search"></i>
+            <input type="text" placeholder="Search courses, resources...">
+          </div>
+          <button class="icon-btn" title="Notifications">
+            <i data-lucide="bell"></i>
+            <span class="badge">3</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Section -->
+      <section id="dashboard" class="content-section active">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon courses">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Active Courses</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon quizzes">
+              <i data-lucide="clipboard-check"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value">2</span>
+              <span class="stat-label">Pending Quizzes</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon progress">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-value">87%</span>
+              <span class="stat-label">Overall Progress</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="card recent-courses">
+            <h2 class="card-title">
+              <i data-lucide="clock"></i>
+              Recent Activity
+            </h2>
+            <ul class="activity-list">
+              <li>
+                <i data-lucide="file-text" class="activity-icon"></i>
+                <div>
+                  <strong>Completed:</strong> Data Structures Quiz 2
+                  <span class="activity-time">2 hours ago</span>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="book-open" class="activity-icon"></i>
+                <div>
+                  <strong>Viewed:</strong> Calculus I — Lecture Notes
+                  <span class="activity-time">Yesterday</span>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="video" class="activity-icon"></i>
+                <div>
+                  <strong>Watched:</strong> Discrete Math — Week 3
+                  <span class="activity-time">2 days ago</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card upcoming">
+            <h2 class="card-title">
+              <i data-lucide="calendar"></i>
+              Upcoming
+            </h2>
+            <ul class="upcoming-list">
+              <li>
+                <span class="upcoming-date">Feb 24</span>
+                <span>Research Paper — Ethics</span>
+              </li>
+              <li>
+                <span class="upcoming-date">Feb 25</span>
+                <span>Calculus I — Midterm</span>
+              </li>
+              <li>
+                <span class="upcoming-date">Feb 27</span>
+                <span>Data Structures — Lab Submission</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section id="courses" class="content-section">
+        <div class="section-header">
+          <h2>My Semester Courses</h2>
+          <p class="section-subtitle">Fall 2025 — Year 1 Undergraduate</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card">
+            <div class="course-thumb math">
+              <i data-lucide="calculator"></i>
+            </div>
+            <div class="course-body">
+              <h3>Calculus I</h3>
+              <p>Limits, derivatives & integration</p>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                <span>75% complete</span>
+              </div>
+              <a href="#" class="btn btn-primary course-trigger" data-course="math">Continue</a>
+            </div>
+          </article>
+          <article class="course-card">
+            <div class="course-thumb science">
+              <i data-lucide="flask-conical"></i>
+            </div>
+            <div class="course-body">
+              <h3>Data Structures</h3>
+              <p>Arrays, trees, graphs & algorithms</p>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
+                <span>60% complete</span>
+              </div>
+              <a href="#" class="btn btn-primary course-trigger" data-course="science">Continue</a>
+            </div>
+          </article>
+          <article class="course-card">
+            <div class="course-thumb english">
+              <i data-lucide="book-text"></i>
+            </div>
+            <div class="course-body">
+              <h3>Academic Writing</h3>
+              <p>Research & technical writing</p>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                <span>90% complete</span>
+              </div>
+              <a href="#" class="btn btn-primary course-trigger" data-course="english">Continue</a>
+            </div>
+          </article>
+          <article class="course-card">
+            <div class="course-thumb history">
+              <i data-lucide="cpu"></i>
+            </div>
+            <div class="course-body">
+              <h3>Discrete Mathematics</h3>
+              <p>Logic, sets, proofs & combinatorics</p>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width: 45%"></div></div>
+                <span>45% complete</span>
+              </div>
+              <a href="#" class="btn btn-primary course-trigger" data-course="history">Continue</a>
+            </div>
+          </article>
+          <article class="course-card">
+            <div class="course-thumb comp">
+              <i data-lucide="code"></i>
+            </div>
+            <div class="course-body">
+              <h3>Programming Fundamentals</h3>
+              <p>Python, OOP & software design</p>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width: 55%"></div></div>
+                <span>55% complete</span>
+              </div>
+              <a href="#" class="btn btn-primary course-trigger" data-course="comp">Continue</a>
+            </div>
+          </article>
+          <article class="course-card">
+            <div class="course-thumb pe">
+              <i data-lucide="scale"></i>
+            </div>
+            <div class="course-body">
+              <h3>Ethics & Society</h3>
+              <p>Technology, ethics & responsibility</p>
+              <div class="course-progress">
+                <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+                <span>100% complete</span>
+              </div>
+              <a href="#" class="btn btn-outline course-trigger" data-course="pe">Review</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section id="resources" class="content-section">
+        <div class="section-header">
+          <h2>Learning Resources</h2>
+          <p class="section-subtitle">Study materials by subject</p>
+        </div>
+        <div class="resource-filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Calculus</button>
+          <button class="filter-btn">Data Structures</button>
+          <button class="filter-btn">Programming</button>
+          <button class="filter-btn">Discrete Math</button>
+          <button class="filter-btn">Academic Writing</button>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card resource-trigger" data-resource="calculus-notes">
+            <div class="resource-icon"><i data-lucide="file-text"></i></div>
+            <h3>Calculus I — Lecture Notes</h3>
+            <p>Limits, derivatives & integration</p>
+            <span class="resource-tag">Calculus</span>
+          </div>
+          <div class="resource-card resource-trigger" data-resource="ds-videos">
+            <div class="resource-icon"><i data-lucide="video"></i></div>
+            <h3>Data Structures Videos</h3>
+            <p>Linked lists, trees & graphs</p>
+            <span class="resource-tag">Data Structures</span>
+          </div>
+          <div class="resource-card resource-trigger" data-resource="discrete-slides">
+            <div class="resource-icon"><i data-lucide="file-image"></i></div>
+            <h3>Discrete Math — Proofs</h3>
+            <p>Induction, logic & sets</p>
+            <span class="resource-tag">Discrete Math</span>
+          </div>
+          <div class="resource-card resource-trigger" data-resource="research-guide">
+            <div class="resource-icon"><i data-lucide="file-text"></i></div>
+            <h3>Research Paper Guide</h3>
+            <p>Structure, citations & APA format</p>
+            <span class="resource-tag">Academic Writing</span>
+          </div>
+          <div class="resource-card resource-trigger" data-resource="python-pdf">
+            <div class="resource-icon"><i data-lucide="braces"></i></div>
+            <h3>Python & OOP Notes</h3>
+            <p>Programming fundamentals</p>
+            <span class="resource-tag">Programming</span>
+          </div>
+          <div class="resource-card resource-trigger" data-resource="algorithms-pdf">
+            <div class="resource-icon"><i data-lucide="presentation"></i></div>
+            <h3>Algorithm Analysis</h3>
+            <p>Big-O, sorting & searching</p>
+            <span class="resource-tag">Data Structures</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quizzes Section -->
+      <section id="quizzes" class="content-section">
+        <div class="section-header">
+          <h2>Quizzes</h2>
+          <p class="section-subtitle">Test your knowledge</p>
+        </div>
+        <div class="quiz-container">
+          <div class="quiz-card pending">
+            <div class="quiz-badge">Available</div>
+            <h3>Calculus I — Derivatives</h3>
+            <p>15 questions · 25 minutes</p>
+            <div class="quiz-meta">
+              <span><i data-lucide="clock"></i> Due Feb 25</span>
+            </div>
+            <button class="btn btn-primary btn-block">Start Quiz</button>
+          </div>
+          <div class="quiz-card pending">
+            <div class="quiz-badge">Available</div>
+            <h3>Data Structures — Trees</h3>
+            <p>20 questions · 30 minutes</p>
+            <div class="quiz-meta">
+              <span><i data-lucide="clock"></i> Due Feb 28</span>
+            </div>
+            <button class="btn btn-primary btn-block">Start Quiz</button>
+          </div>
+          <div class="quiz-card completed">
+            <div class="quiz-badge success">Completed</div>
+            <h3>Data Structures Quiz 2</h3>
+            <p>Score: 92%</p>
+            <div class="quiz-meta">
+              <span><i data-lucide="check-circle"></i> Feb 18</span>
+            </div>
+            <button class="btn btn-outline btn-block">Review</button>
+          </div>
+          <div class="quiz-card completed">
+            <div class="quiz-badge success">Completed</div>
+            <h3>Discrete Math — Logic</h3>
+            <p>Score: 88%</p>
+            <div class="quiz-meta">
+              <span><i data-lucide="check-circle"></i> Feb 15</span>
+            </div>
+            <button class="btn btn-outline btn-block">Review</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Other Resources Section -->
+      <section id="materials" class="content-section">
+        <div class="section-header">
+          <h2>Other Resources</h2>
+          <p class="section-subtitle">Library, links & helpful tools</p>
+        </div>
+        <div class="materials-grid">
+          <a href="#" class="material-card link-trigger" data-link="library">
+            <i data-lucide="globe"></i>
+            <h3>Online Library</h3>
+            <p>E-books, journals & databases</p>
+          </a>
+          <a href="#" class="material-card link-trigger" data-link="useful-links">
+            <i data-lucide="link"></i>
+            <h3>Useful Links</h3>
+            <p>Research & learning platforms</p>
+          </a>
+          <a href="#" class="material-card link-trigger" data-link="audio">
+            <i data-lucide="headphones"></i>
+            <h3>Audio Resources</h3>
+            <p>Podcasts & study music</p>
+          </a>
+          <a href="#" class="material-card link-trigger" data-link="study-groups">
+            <i data-lucide="users"></i>
+            <h3>Study Groups</h3>
+            <p>Peer study groups</p>
+          </a>
+          <a href="#" class="material-card link-trigger" data-link="tutor">
+            <i data-lucide="help-circle"></i>
+            <h3>Academic Support</h3>
+            <p>Tutoring & office hours</p>
+          </a>
+          <a href="#" class="material-card link-trigger" data-link="calendar">
+            <i data-lucide="calendar-check"></i>
+            <h3>Academic Calendar</h3>
+            <p>Holidays & exam schedule</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Settings Section -->
+      <section id="settings" class="content-section">
+        <div class="section-header">
+          <h2>Settings</h2>
+          <p class="section-subtitle">Manage your account</p>
+        </div>
+        <div class="settings-card">
+          <div class="setting-item">
+            <label>Display Name</label>
+            <input type="text" value="Rhoda Elolo Tengeh">
+          </div>
+          <div class="setting-item">
+            <label>Email</label>
+            <input type="email" value="rhoda.elolo.tengeh@university.edu">
+          </div>
+          <div class="setting-item">
+            <label>Notification Preferences</label>
+            <div class="toggle-group">
+              <span>Quiz reminders</span>
+              <input type="checkbox" checked class="toggle">
+            </div>
+          </div>
+          <button class="btn btn-primary">Save Changes</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Link/Resource/Course Content Modal -->
+  <div id="content-modal" class="modal">
+    <div class="modal-content content-modal">
+      <button class="modal-close" data-close="content-modal" aria-label="Close">&times;</button>
+      <div id="content-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div id="quiz-modal" class="modal">
+    <div class="modal-content quiz-modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h2>Calculus I — Derivatives Quiz</h2>
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="quiz-progress"></div>
+      </div>
+      <div id="quiz-questions">
+        <div class="quiz-question">
+          <p class="question-text">What is the derivative of f(x) = x² + 3x?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="2x"> 2x + 3</label>
+            <label><input type="radio" name="q1" value="x"> x + 3</label>
+            <label><input type="radio" name="q1" value="2x2"> 2x² + 3</label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-actions">
+        <button class="btn btn-outline" id="prev-q">Previous</button>
+        <button class="btn btn-primary" id="next-q">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
